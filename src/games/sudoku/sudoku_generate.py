@@ -1,4 +1,7 @@
-from pickletools import float8
+"""
+https://github.com/erelado/py-sudoku/blob/master/Sudoku.py
+"""
+
 from random import shuffle, seed as random_seed, randrange
 import sys
 from typing import Iterable, List, Optional, Tuple, Union, cast
@@ -599,3 +602,6 @@ class _DiagonalSudokuSolver(_SudokuSolver):
         board[row][col] = Sudoku._empty_cell_value
         return None
 
+if __name__ == '__main__':
+    puzzle = Sudoku(3).difficulty(0.5)
+    puzzle.show()
